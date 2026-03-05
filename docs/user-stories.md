@@ -21,14 +21,13 @@ This document defines the Proxy-Portfolio from the perspective of different view
 * Each project card displays a title, description, and tech stack.
 * Data is retrieved via a REST API from the Java backend.
 
-## Epic: PRoxy & Analytics (Backend)
+## Epic: API & Analytics (Backend)
 
 ### Embedded Project Demo
-**As a** Recruiter/Visitor, **I want** to view and test a project demo within the portfolio site, **So that** I don't have to  manage multiple tabs or leave the current domain.
+**As a** Recruiter/Visitor, **I want** to view and test a project demo within the portfolio site, **So that** I don't have to manage multiple tabs or leave the current domain.
 
 **Acceptance Criteria** 
-* The Java server acts as a reverse proxy to fetch external content.
-* The demo  renders within an 'iframe' or a react component.
+* The React frontend renders the target project URL directly within an iframe.
 * The URL in the browser remains on the portfolio domain.
 
 ### Engagement Tracking
@@ -37,7 +36,7 @@ This document defines the Proxy-Portfolio from the perspective of different view
 **Acceptance Criteria** 
 * The System captures Project ID and timestamp on every launch.
 * Data is persisted in a PostgreSQL database.
-* The logging happens server-side to ensure accuracy.
+* The frontend sends a asynchronous, non-blocking REST API request to the backend to ensure the suer experience is not delayed.
 
 ## Epic: Insights
 

@@ -1,4 +1,4 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

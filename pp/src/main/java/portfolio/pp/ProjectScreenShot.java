@@ -1,15 +1,14 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-import java.time.OffsetDateTime;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "AccessLog")
-public class AccessLog {
+@Table(name = "ProjectScreenShots")
+public class ProjectScreenShot {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,13 +18,13 @@ public class AccessLog {
     @JoinColumn(name = "project_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Project project;
+    
+    @Column(name = "image_url", columnDefinition="TEXT", nullable = false)
+    private String imageUrl;
 
-    @Column(name = "accessed_at", nullable = false, updatable = false)
-    private OffsetDateTime accessedAt;
+    @Column(name = "caption", length = 300)
+    private String caption;
 
-    @Column(name = "ip_address", columnDefinition = "TEXT")
-    private String ipAddress;
-
-    @Column(name = "user_agent", nullable = false, length = 200)
-    private String userAgent;
+    @Column(name = "display_order")
+    private int displayOrder;
 }

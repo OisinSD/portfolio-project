@@ -1,12 +1,12 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
-import jakarta.persistence.*;
 import lombok.Data;
+import jakarta.persistence.*;
 
 @Entity
 @Data
-@Table(name = "ProjectTech")
-public class ProjectTech {
+@Table(name = "ProjectSkills")
+public class ProjectSkill {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,6 @@ public class ProjectTech {
     private Project project;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "tech_id", nullable = false)
-    private Technology technology;
+    @JoinColumn(name = "skill_id", nullable = false)
+    private Skill skill;
 }

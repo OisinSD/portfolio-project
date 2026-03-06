@@ -1,4 +1,4 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

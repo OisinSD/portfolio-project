@@ -1,4 +1,4 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package portfolio.pp;
+package portfolio.pp.models;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;

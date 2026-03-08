@@ -1,6 +1,9 @@
-package portfolio.pp;
+package portfolio.pp.repos;
 
 import org.springframework.stereotype.Repository;
+
+import portfolio.pp.models.ProjectSkill;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

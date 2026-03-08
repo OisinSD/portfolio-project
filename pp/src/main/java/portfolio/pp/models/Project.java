@@ -1,7 +1,8 @@
-package portfolio.pp;
+package portfolio.pp.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.util.List;
 import java.util.ArrayList;
 

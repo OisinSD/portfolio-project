@@ -1,4 +1,4 @@
-package portfolio.pp;
+package portfolio.pp.models;
 
 import lombok.Data;
 import jakarta.persistence.*;

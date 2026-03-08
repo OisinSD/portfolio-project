@@ -1,4 +1,4 @@
-package portfolio.pp;
+package portfolio.pp.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

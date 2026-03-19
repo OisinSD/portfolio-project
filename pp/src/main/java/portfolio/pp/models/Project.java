@@ -32,4 +32,16 @@ public class Project {
 
     @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProjectScreenShot> screenshots = new ArrayList<>();
+    
+    // 1. For AccessLogs (Assuming Project has many logs)
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AccessLog> accessLogs = new ArrayList<>();
+
+    // 2. For ProjectSkills (The Joiner Table)
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<ProjectSkill> projectSkills = new ArrayList<>();
+
+    // 3. For ProjectTech (The Joiner Table)
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<ProjectTech> projectTechs = new ArrayList<>();
 }

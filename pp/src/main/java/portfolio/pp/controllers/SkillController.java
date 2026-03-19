@@ -18,7 +18,7 @@ public class SkillController {
     }
 
     @GetMapping("path")
-    public List<Skill> getMethodName() {
+    public List<Skill> getAllSkillMetaData() {
         return skillRepo.findAll();
     }
     

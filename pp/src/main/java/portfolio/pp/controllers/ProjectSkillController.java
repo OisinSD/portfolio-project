@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/ProejectSkill")
 public class ProjectSkillController {
 
     private final ProjectSkillRepo projectSkillRepo;

@@ -9,14 +9,14 @@ import jakarta.persistence.*;
 
 @Entity
 @Data
-@Table(name = "Skills")
+@Table(name = "skills")
 public class Skill {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name", length = 100, nullable = false)
+    @Column(name = "skill_name", length = 100, nullable = false)
     private String name;
 
     @Column(name = "proficiency_level", length = 200, nullable = false)

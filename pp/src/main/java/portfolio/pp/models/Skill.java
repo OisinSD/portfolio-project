@@ -1,10 +1,12 @@
 package portfolio.pp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -28,5 +30,10 @@ public class Skill {
 
     @Column(name = "category", length = 200)
     private String category;
+
+    // 2. For ProjectSkills (The Joiner Table)
+    @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<ProjectSkill> projectSkills = new ArrayList<>();
 
 }

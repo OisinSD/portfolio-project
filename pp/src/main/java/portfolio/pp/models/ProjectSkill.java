@@ -22,6 +22,5 @@ public class ProjectSkill {
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "skill_id", nullable = false)
-    @JsonIgnore
     private Skill skill;
 }

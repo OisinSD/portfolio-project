@@ -1,9 +1,10 @@
 package portfolio.pp.models;
 
+import lombok.Data;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
 @Data
@@ -19,8 +20,7 @@ public class ProjectTech {
     @JsonIgnore
     private Project project;
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name = "tech_id", nullable = false)
-    @JsonIgnore
     private Technology technology;
 }

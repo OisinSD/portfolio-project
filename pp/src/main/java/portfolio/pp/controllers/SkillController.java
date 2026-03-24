@@ -17,7 +17,7 @@ public class SkillController {
         this.skillRepo = skillRepo;
     }
 
-    @GetMapping("path")
+    @GetMapping
     public List<Skill> getAllSkillMetaData() {
         return skillRepo.findAll();
     }

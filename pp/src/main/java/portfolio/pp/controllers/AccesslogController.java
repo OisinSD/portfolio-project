@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/accessLogs")
 public class AccesslogController {
+    
     private final AccessLogRepo accessLogRepo;
 
     public AccesslogController(AccessLogRepo accessLogRepo){

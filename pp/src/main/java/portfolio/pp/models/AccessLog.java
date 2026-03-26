@@ -1,7 +1,10 @@
-package proxy.portfolio.pp;
+package portfolio.pp.models;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.OffsetDateTime;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -18,6 +21,7 @@ public class AccessLog {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     private Project project;
 
     @Column(name = "accessed_at", nullable = false, updatable = false)

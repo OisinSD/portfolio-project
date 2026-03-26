@@ -1,6 +1,10 @@
-package proxy.portfolio.pp;
+package portfolio.pp.models;
 
-import jakarta.persistence.Entity;
+import java.util.List;
+import java.util.ArrayList;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -21,4 +25,8 @@ public class Technology {
 
     @Column(name = "tech_category", length = 300)
     private String techCategory;
+
+    @OneToMany(mappedBy = "technology", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<ProjectTech> projectTech = new ArrayList<>();
 }

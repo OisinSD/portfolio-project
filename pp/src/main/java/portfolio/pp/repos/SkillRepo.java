@@ -1,9 +1,12 @@
-package proxy.portfolio.pp;
+package portfolio.pp.repos;
 
 import org.springframework.stereotype.Repository;
+
+import portfolio.pp.models.Skill;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface ProjectScreenShotRepo extends JpaRepository<ProjectScreenShot, Integer>{
+public interface SkillRepo extends JpaRepository<Skill, Integer>{
     
 }

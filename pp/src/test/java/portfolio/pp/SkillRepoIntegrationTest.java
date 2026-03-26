@@ -1,9 +1,18 @@
-package proxy.portfolio.pp;
+package portfolio.pp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import jakarta.transaction.Transactional;
+import portfolio.pp.models.AccessLog;
+import portfolio.pp.models.Project;
+import portfolio.pp.models.ProjectSkill;
+import portfolio.pp.models.Skill;
+import portfolio.pp.repos.AccessLogRepo;
+import portfolio.pp.repos.ProjectRepo;
+import portfolio.pp.repos.ProjectSkillRepo;
+import portfolio.pp.repos.SkillRepo;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.time.OffsetDateTime;

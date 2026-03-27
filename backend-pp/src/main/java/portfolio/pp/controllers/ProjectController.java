@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import portfolio.pp.models.Project;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/api/projects")
@@ -22,5 +23,9 @@ public class ProjectController {
     @GetMapping
     public List<Project> getAllProjectMetaData(){
         return projectRepo.findAll(); //retrives project/s data -> JSON
+    }
+    @GetMapping("/test-403")
+    public ResponseEntity<?> test403() {
+        return ResponseEntity.status(403).build();
     }
 }

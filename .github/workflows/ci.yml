@@ -40,5 +40,5 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
-        working-directory: ./pp
+        working-directory: ./backend-pp
      

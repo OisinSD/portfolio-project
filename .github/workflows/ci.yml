@@ -38,6 +38,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./backend-pp/gradlew
+
       - name: Build with Gradle
         run: ./gradlew clean build
         working-directory: ./backend-pp

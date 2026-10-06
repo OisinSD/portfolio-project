@@ -1,6 +1,8 @@
 package portfolio.pp.controllers;
 
 import portfolio.pp.repos.ProjectRepo;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +18,7 @@ public class ProjectController {
     
     private final ProjectRepo projectRepo;
 
-    // Link Controller to Databse
+    // Link Controller to Database
     public ProjectController(ProjectRepo projectRepo){
         this.projectRepo = projectRepo;
     }
@@ -28,9 +30,9 @@ public class ProjectController {
     }
     
     @GetMapping("/test-403")
-public void view403(HttpServletResponse response) throws java.io.IOException {
+    public void view403(HttpServletResponse response) throws java.io.IOException {
     // This tells the container "an error happened," 
-    // which triggers the automatic search for your error page.
+    // which triggers the automatic search for error page.
     response.sendError(HttpServletResponse.SC_FORBIDDEN);
 }
 }

@@ -30,7 +30,7 @@ public class ProjectControllerTest {
         // 1. Arrange: Save a dummy project to the database FIRST
     Project dummyProject = new Project();
             dummyProject.setProjectName("TestProject");
-            dummyProject.setSlug("thisIsATestSlugTEST");
+            dummyProject.setSlug("thisIsATestSlugTEST-" + System.currentTimeMillis());
             dummyProject.setInternalEndpoint("/api/projects");
             projectRepo.save(dummyProject);
 
